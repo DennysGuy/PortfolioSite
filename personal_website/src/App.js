@@ -1,8 +1,14 @@
 import './App.css';
+import NavBar from './Components/NavBar';
+import AboutMe from './Pages/AboutMe';
 
 function App() {
   return (
-    <h1 className="text-green-300 text-3xl font-bold underline"> Hello World!</h1>
+    <div>
+      <NavBar />
+      <AboutMe />
+    </div>
+
   );
 }
 
