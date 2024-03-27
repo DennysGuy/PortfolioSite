@@ -1,0 +1,42 @@
+{
+    "projects": [
+        {
+            "title": "UML Editor",
+            "type": "Windows/Mac",
+            "image": "https://www.umlet.com/pic/umlet_screenshot.png",
+            "alt_id": "uml-editor",
+            "description": "The UML Editor was developed during my Software Development principles class (CSCD350). The goal for this class project was to work in teams of 5 or 6 while implementing object oriented programming concepts, learn the process of github, and incorporate the agile process. The quarter was partitioned into sprints where we had to satisfy given requirements as well as a 'real world' client who gave us feedback. The first half of the quarter was focused on developing the UML editor in the commandline while the second half was focused on a GUI iteration. UML Editor was developed using the Java language and the Java FX GUI library.",
+            "githublink": "https://github.com/harley-ewu/ReluctantJava",
+            "id": "1"
+            
+        
+        },
+        {
+            "title": "Welcome To Cheney",
+            "type": "iOS/Android",
+            "image": "https://i.imgur.com/6oqYI4h.png",
+            "alt_id": "wtc-app",
+            "description": "Welcome to Cheney is an application, currently in the early stages of development, that is intended to connect the residents of Cheney Washington with local organizations and city officials. The application is not out yet, and it is just fresh out of the conceptualization phase. WTC is my (along with four others) senior project for the Eastern Washington University Computer Science program. It will be developed with the Flutter framework and Firebase for the backend.",
+            "githublink": "ph",
+            "id": "2"
+        },
+        {
+            "title": "Devil's Treasure",
+            "type": "PC/Browser Game",
+            "image": "https://i.imgur.com/JFcUIoc.png",
+            "alt_id": "devils-treasure",
+            "description": "Devil's Treasure is a - currently in development - action/adventure game inspired by Metroid and Legend of Zelda on the game boy color. The game features 2D graphics inspired by the 8-bit graphics of the gameboy color. The game features puzzle/platforming mechanics where you will take on lock/key puzzles, platforming puzzles, and fighting against a plethora of enemies and a boss at the end. This project was intended to contribute to the lore a long running ~ in development ~ game world as well as practice my game development skills. The project is currently being prototyped and developed in the Godot game engine.",
+            "githublink": "https://github.com/DennysGuy/DevilsTreasure",
+            "id": "3"
+        },
+        {
+            "title": "Tetris",
+            "type": "PC Game",
+            "image": "https://m.media-amazon.com/images/I/61M3rDwh4qL.png",
+            "alt_id": "tetris",
+            "description": "Tetris was a quick project to practice my python object oriented skills. It was developed using the graphics library - PyGame. This project was developed during the end of summer of 2023.",
+            "githublink": "https://github.com/DennysGuy/Matt-s-Tetris",
+            "id": "4"
+        }
+    ]
+}

@@ -4,14 +4,14 @@ const AboutMe = () => {
             <h1 class="page-header">Biography</h1>
             
             <div class="pt-10 flex justify-center items-center">
-                <body class="pb-10 max-w-[650px]">
+                <body class="pb-10 pl-10 pr-10 max-w-[650px]">
                     <p class="overflow-wrap break-word">
                         My name is Matthew Matriciano. I am currently a senior at Eastern Washington University. 
                         I have been developing a passion for programming for the last 4 years.
                         My dominant interests in the realm of computer science is game development, software development, 
                         and more recently, web development. Outside of computer science, I have an eclectic set of interests and hobbies 
                         such as composing video game style music, collecting video games, reading philosophy, film making, writing, AI, mecha, animation, pixel art, low poly 3D, and more.
-                        My goal is to be a software developer by trade and a solo game developer by night. 
+                        My goal is to be a software developer by day and a solo game developer by night. 
                         <br/>
                         <br/>
                         My passion for programming started with game development. Throughout my childhood, I was exposed to all different
@@ -45,7 +45,7 @@ const AboutMe = () => {
                         and to hopefully make it a life long career.
                         <br/>
                         <br/>
-                        Thank you for taking interest in my profile and following my journey,
+                        Thank you for taking interest in my profile and my journey,
                         <br/>
                         Matt
                     </p>
