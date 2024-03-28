@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 const ProjectCard = (props) => {
     return ( 
+    <Link to="/blogpage">
     <div class="project-card">
         <div class="flex flex-col px-4 pb-4">
             <h2 class="underline italic text-xl font-bold pb-2">{props.title}</h2>
@@ -13,7 +15,10 @@ const ProjectCard = (props) => {
                 <span class="italic pr-4 font-bold">{props.type}</span>
             </div> 
         </div>
-    </div> );
+    </div> 
+    </Link>
+    
+    );
 }
  
 export default ProjectCard;

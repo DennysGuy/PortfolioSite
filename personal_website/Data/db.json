@@ -9,7 +9,6 @@
             "githublink": "https://github.com/harley-ewu/ReluctantJava",
             "id": "1"
             
-        
         },
         {
             "title": "Welcome To Cheney",
@@ -37,6 +36,26 @@
             "description": "Tetris was a quick project to practice my python object oriented skills. It was developed using the graphics library - PyGame. This project was developed during the end of summer of 2023.",
             "githublink": "https://github.com/DennysGuy/Matt-s-Tetris",
             "id": "4"
+        }
+    ],
+
+    "accounts": [
+        {
+            "username": "DennysGuy",
+            "password": "zxcasdf123",
+            "email": "mattmatriciano@gmail.com",
+            "userid": "1"
+        },
+        {
+            "username": "Tanman200",
+            "password": "password1",
+            "email": "testemail@gmail.com",
+            "userid": "1"
+        }
+    ],
+    "blog-pages": [
+        {
+            
         }
     ]
 }
