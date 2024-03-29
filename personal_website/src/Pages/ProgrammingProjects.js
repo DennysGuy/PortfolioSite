@@ -8,10 +8,9 @@ const ProgrammingProjects = () => {
     
     const {data: projects, isPending, error} = useFetch('http://localhost:8000/projects');
     return (  
-        <div class="grid">
+        <div class="">
             <h1 class="page-header">Programming Projects</h1>
-            
-            <div class="grid grid-rows pt-8">
+            <div class="pt-8">
                 {error && <div>{error}</div>}
                 {isPending && <div>Loading Projects...</div>}
                 {projects && <ProjectList projects={projects}/>}

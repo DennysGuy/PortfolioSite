@@ -5,6 +5,7 @@ const useFetch = (url) => {
     const[data, setData] = useState(null);
     const[isPending, setIsPending] = useState(true);
     const[error, setError] = useState(null);
+    const[isEmpty, setIsEmpty] = useState(false);
     
     useEffect( () => {
         fetch(url)
@@ -16,6 +17,10 @@ const useFetch = (url) => {
             return res.json();
         })
         .then(data => {
+            if (data && data.length <= 0) {
+                setIsEmpty(true);
+            }
+
             setData(data);
             setIsPending(false);
             setError(null);
@@ -26,7 +31,7 @@ const useFetch = (url) => {
         })
     }, [url]);
     
-    return {data, isPending, error}
+    return {data, isPending, isEmpty, error}
 }
  
 export default useFetch;

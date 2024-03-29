@@ -1,61 +1,83 @@
 {
-    "projects": [
-        {
-            "title": "UML Editor",
-            "type": "Windows/Mac",
-            "image": "https://www.umlet.com/pic/umlet_screenshot.png",
-            "alt_id": "uml-editor",
-            "description": "The UML Editor was developed during my Software Development principles class (CSCD350). The goal for this class project was to work in teams of 5 or 6 while implementing object oriented programming concepts, learn the process of github, and incorporate the agile process. The quarter was partitioned into sprints where we had to satisfy given requirements as well as a 'real world' client who gave us feedback. The first half of the quarter was focused on developing the UML editor in the commandline while the second half was focused on a GUI iteration. UML Editor was developed using the Java language and the Java FX GUI library.",
-            "githublink": "https://github.com/harley-ewu/ReluctantJava",
-            "id": "1"
-            
-        },
-        {
-            "title": "Welcome To Cheney",
-            "type": "iOS/Android",
-            "image": "https://i.imgur.com/6oqYI4h.png",
-            "alt_id": "wtc-app",
-            "description": "Welcome to Cheney is an application, currently in the early stages of development, that is intended to connect the residents of Cheney Washington with local organizations and city officials. The application is not out yet, and it is just fresh out of the conceptualization phase. WTC is my (along with four others) senior project for the Eastern Washington University Computer Science program. It will be developed with the Flutter framework and Firebase for the backend.",
-            "githublink": "ph",
-            "id": "2"
-        },
-        {
-            "title": "Devil's Treasure",
-            "type": "PC/Browser Game",
-            "image": "https://i.imgur.com/JFcUIoc.png",
-            "alt_id": "devils-treasure",
-            "description": "Devil's Treasure is a - currently in development - action/adventure game inspired by Metroid and Legend of Zelda on the game boy color. The game features 2D graphics inspired by the 8-bit graphics of the gameboy color. The game features puzzle/platforming mechanics where you will take on lock/key puzzles, platforming puzzles, and fighting against a plethora of enemies and a boss at the end. This project was intended to contribute to the lore a long running ~ in development ~ game world as well as practice my game development skills. The project is currently being prototyped and developed in the Godot game engine.",
-            "githublink": "https://github.com/DennysGuy/DevilsTreasure",
-            "id": "3"
-        },
-        {
-            "title": "Tetris",
-            "type": "PC Game",
-            "image": "https://m.media-amazon.com/images/I/61M3rDwh4qL.png",
-            "alt_id": "tetris",
-            "description": "Tetris was a quick project to practice my python object oriented skills. It was developed using the graphics library - PyGame. This project was developed during the end of summer of 2023.",
-            "githublink": "https://github.com/DennysGuy/Matt-s-Tetris",
-            "id": "4"
-        }
-    ],
+  "projects": [
+    {
+      "title": "UML Editor",
+      "type": "Windows/Mac",
+      "image": "https://www.umlet.com/pic/umlet_screenshot.png",
+      "alt_id": "uml-editor",
+      "description": "The UML Editor was developed during my Software Development principles class (CSCD350). The goal for this class project was to work in teams of 5 or 6 while implementing object oriented programming concepts, learn the process of github, and incorporate the agile process. The quarter was partitioned into sprints where we had to satisfy given requirements as well as a 'real world' client who gave us feedback. The first half of the quarter was focused on developing the UML editor in the commandline while the second half was focused on a GUI iteration. UML Editor was developed using the Java language and the Java FX GUI library.",
+      "githublink": "https://github.com/harley-ewu/ReluctantJava",
+      "blogpage": "/umleditor-blog",
+      "id": "1"
+    },
+    {
+      "title": "Welcome To Cheney",
+      "type": "iOS/Android",
+      "image": "https://i.imgur.com/6oqYI4h.png",
+      "alt_id": "wtc-app",
+      "description": "Welcome to Cheney is an application, currently in the early stages of development, that is intended to connect the residents of Cheney Washington with local organizations and city officials. The application is not out yet, and it is just fresh out of the conceptualization phase. WTC is my (along with four others) senior project for the Eastern Washington University Computer Science program. It will be developed with the Flutter framework and Firebase for the backend.",
+      "githublink": "ph",
+      "blogpage": "/wtc-blog",
+      "id": "2"
+    },
+    {
+      "title": "Devil's Treasure",
+      "type": "PC/Browser Game",
+      "image": "https://i.imgur.com/JFcUIoc.png",
+      "alt_id": "devils-treasure",
+      "description": "Devil's Treasure is a - currently in development - action/adventure game inspired by Metroid and Legend of Zelda on the game boy color. The game features 2D graphics inspired by the 8-bit graphics of the gameboy color. The game features puzzle/platforming mechanics where you will take on lock/key puzzles, platforming puzzles, and fighting against a plethora of enemies and a boss at the end. This project was intended to contribute to the lore a long running ~ in development ~ game world as well as practice my game development skills. The project is currently being prototyped and developed in the Godot game engine.",
+      "githublink": "https://github.com/DennysGuy/DevilsTreasure",
+      "blogpage": "/devilstreasure-blog",
+      "id": "3"
+    },
+    {
+      "title": "Tetris",
+      "type": "PC Game",
+      "image": "https://m.media-amazon.com/images/I/61M3rDwh4qL.png",
+      "alt_id": "tetris",
+      "description": "Tetris was a quick project to practice my python object oriented skills. It was developed using the graphics library - PyGame. This project was developed during the end of summer of 2023.",
+      "githublink": "https://github.com/DennysGuy/Matt-s-Tetris",
+      "blogpage": "/tetris-blog",
+      "id": "4"
+    }
+  ],
+  "accounts": [
+    {
+      "username": "DennysGuy",
+      "password": "zxcasdf123",
+      "email": "mattmatriciano@gmail.com",
+      "userid": "1",
+      "id": "68a0"
+    },
+    {
+      "username": "Tanman200",
+      "password": "password1",
+      "email": "testemail@gmail.com",
+      "userid": "2",
+      "id": "d334"
+    }
+  ],
+  "umleditor-blog": [
+    {
+      "id": "8420",
+      "title": "I am doing a quick test to flex on you fools ",
+      "body": "this is ahsljkadaslkjd\ndksjfslkfjdsklfj\nsdlkfjsdlkf\nsd;lkfjsdl;kfjsdlkfj\nsdl;fkjsdlfkjsdlkfjsdlkfjsdlkfjsdf",
+      "author": "DennysGuy",
+      "avatar": "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg",
+      "currentDate": "3/28/2024"
+    },
+    {
+      "id": "3a65",
+      "title": "This is another update",
+      "body": "I have been thinking a lot about how stupid this game is. I have been working on it for 20 days now, and it's still not giving me what I want.\n\nHere are the details:\n\n    - The enemies are so weak that I pee\n    - Random tommy got a gun and started mowing \n    - do you think this is a game or something?\n    - Yeah, that's what I was thinking \n\nAny way, it was great catching up with y'all,\n\nMatt Matrice\n",
+      "author": "DennysGuy",
+      "avatar": "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg",
+      "currentDate": "3/28/2024"
+    }
+  ],
+  "devilstreasure-blog": [],
+  "wtc-blog": [
 
-    "accounts": [
-        {
-            "username": "DennysGuy",
-            "password": "zxcasdf123",
-            "email": "mattmatriciano@gmail.com",
-            "userid": "1"
-        },
-        {
-            "username": "Tanman200",
-            "password": "password1",
-            "email": "testemail@gmail.com",
-            "userid": "1"
-        }
-    ],
-    "blog-pages": [
-        {
-            
-        }
-    ]
+  ],
+  "tetris-blog": []
 }
