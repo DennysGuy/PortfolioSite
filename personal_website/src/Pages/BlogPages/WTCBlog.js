@@ -1,13 +1,13 @@
 import BlogPage from "./BlogPage";
 
-const WTCBlog = (isLoggedIn) => {
+const WTCBlog = (props) => {
   const bloglist = 'http://localhost:8000/wtc-blog';
   const createBlogPage = '/create-wtc-blog'
   const header = "Welcome To Cheney Blog"
 
   return(
     <div>
-      <BlogPage isLoggedin={isLoggedIn} createBlogPage={createBlogPage} blogList={bloglist} pageHeader={header} />
+      <BlogPage isLoggedin={props.isLoggedIn} createBlogPage={createBlogPage} blogList={bloglist} pageHeader={header} />
     </div>
 
   );

@@ -1,27 +1,32 @@
 import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
-    return ( <div class="">
+
+    const handleLogout = () => {
+        props.setLoggedInStatus(false, '', '');
+    }
+
+    return ( <div className="">
         <div>
-            <h1 class="pl-5 font-bold text-4xl pt-8 border bg-slate-400">Matthew Matriciano</h1>
-            <h2></h2>
+            <h1 className="pl-5 font-bold text-4xl pt-8 border bg-slate-400">Matthew Matriciano</h1>
         </div>
-        <nav class="mt-4 mr-[-20px]">
-            <div class="flex justify-between">
+        <nav className="mt-4 mr-[-20px]">
+            <div className="flex justify-between">
                 <div>
                     <Link to="/" className="mx-6 ">Biography</Link>
-                    <Link to="/prog-projects" class="mx-6  pt-6">Programming Projects</Link>
-                    <Link to="/music" class="mx-6 pt-6">Music</Link>
-                    <Link to="/contact" class="mx-6 pt-6">Contact</Link>
+                    <Link to="/prog-projects" className="mx-6  pt-6">Programming Projects</Link>
+                    <Link to="/music" className="mx-6 pt-6">Music</Link>
+                    <Link to="/contact" className="mx-6 pt-6">Contact</Link>
                 </div>
                 <div>
                     {props.isLoggedIn && 
-                    <div class="flex px-12">
-                        <p class="px-12">Welcome Admin!</p>
-                        <Link to="/AccountSettings" class="underline">Account</Link>
+                    <div className="flex px-12">
+                        <p className="px-12">Welcome {props.username}!</p>
+                        <Link to="/AccountSettings" className="hover:underline">Account</Link>
+                        <button onClick={handleLogout} className="ml-12 hover:underline">Log out</button>
                     </div>
                     }
-                    {!props.isLoggedIn && <Link to="/Login" class="underline px-12">Admin Login</Link>}
+                    {!props.isLoggedIn && <Link to="/Login" className="underline px-12">Admin Login</Link>}
                 </div>
             </div>
 

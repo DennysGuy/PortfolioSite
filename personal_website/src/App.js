@@ -18,31 +18,76 @@ import CreateUMLBlogPage from './Pages/CreateBlogPages/CreateUMLBlogPage';
 import CreateWTCBlogPage from './Pages/CreateBlogPages/CreateWTCBlogPage';
 import CreateDTBlogPage from './Pages/CreateBlogPages/CreateDTBlogPage';
 import CreateTetrisBlogPage from './Pages/CreateBlogPages/CreateTetrisBlogPage';
+import axios from 'axios';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleLoginMethod = () => {
-    setIsLoggedIn(true);
+  const handleLogin = async (username, password) => {
+    fetch(`http://localhost:8000/accounts`)
+    .then(response => response.json())
+    .then(accounts => {
+      let loggedIn = false;
+      accounts.forEach(account => {
+        if (account.hasOwnProperty('username') && account.hasOwnProperty('password') &&
+            account['username'] === username && account['password'] === password) {
+          setLoggedInStatus(true, username, password);
+          console.log("Login successful!");
+
+          loggedIn = true;
+        }
+      });
+      if (!loggedIn) {
+        console.log('Login unsuccessful');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  };
+
+
+
+  const setLoggedInStatus = (isLoggedIn, user, pass) => {
+    localStorage.setItem('isLoggedIn', isLoggedIn ? 'true' : 'false');
+    localStorage.setItem('username', user);
+    localStorage.setItem('password', pass);
+
+    setTimeout(() => {
+      window.location.reload();
+      
+    }, 50);
+    
+  }
+
+  const getLoggedInStatus = () => {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    return isLoggedIn === 'true';
+  }
+
+  const getUsername = () => {
+    const username = localStorage.getItem('username');
+    return username;
   }
 
   return (
     <div className="bg-slate-800 text-gray-200">
       <Router>
-        <NavBar  isLoggedIn={isLoggedIn}/>
+        <NavBar  isLoggedIn={getLoggedInStatus()} username={getUsername()} setLoggedInStatus={setLoggedInStatus} />
         <main className="content">
           <Routes>
             <Route path="/" element={<AboutMe />}/>
             <Route path="/prog-projects" element={<ProgrammingProjects />}/>
             <Route path="/music" element={<Music />}/>
             <Route path="/contact" element={<Contact />}/>
-            <Route path="/Login" element={<LoginPage handleLogin={handleLoginMethod} />}/>
+            <Route path="/Login" element={<LoginPage username={username} password={password} setUsername={setUsername} setPassword={setPassword}handleLogin={handleLogin} isLoggedIn={getLoggedInStatus()} />}/>
             <Route path="/AccountSettings" element={<AccountPage />}/>
             <Route path="/create-blog-page" element={<CreateBlogPage />}/>
-            <Route path="/umleditor-blog" element={<UMLEditorBlog isLoggedIn={isLoggedIn}/>} />
-            <Route path="/wtc-blog" element={<WTCBlog isLoggedIn={isLoggedIn} />} />
-            <Route path="/devilstreasure-blog" element={<DevilsTreasureBlog isLoggedIn={isLoggedIn} />} />
-            <Route path="/tetris-blog" element={<TetrisBlog isLoggedIn={isLoggedIn} />} />
+            <Route path="/umleditor-blog" element={<UMLEditorBlog isLoggedIn={getLoggedInStatus()}/>} />
+            <Route path="/wtc-blog" element={<WTCBlog isLoggedIn={getLoggedInStatus()} />} />
+            <Route path="/devilstreasure-blog" element={<DevilsTreasureBlog isLoggedIn={getLoggedInStatus()} />} />
+            <Route path="/tetris-blog" element={<TetrisBlog isLoggedIn={getLoggedInStatus()} />} />
             <Route path="/create-uml-editor-blog" element={<CreateUMLBlogPage />} />
             <Route path="/create-wtc-blog" element={<CreateWTCBlogPage />} />
             <Route path="/create-dt-blog" element={<CreateDTBlogPage />} />

@@ -18,6 +18,7 @@ const BlogList = ({blogs, sorted}) => {
                     const dateA = new Date(a.date);
                     const dateB = new Date(b.date);
         
+                    //sorts descending if false, sorts ascending if true
                     if (sorted == false)
                         return dateB-dateA;
                     else
