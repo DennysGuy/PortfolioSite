@@ -1,6 +1,6 @@
 import BlogPost from "./BlogPost";
 
-const BlogList = ({blogs}) => {
+const BlogList = ({blogs, sorted}) => {
     /*
         -- A blog list will contain a list of blogs 
         -- On the blog page, in admin mode, an admin will be able to create a post 
@@ -9,11 +9,25 @@ const BlogList = ({blogs}) => {
 
     */
     
+
         return (  
             <div class="grid  justify-center my-4">
-                {blogs.map((blog) => (
-                   <BlogPost avatar={blog.avatar} title={blog.title} author={blog.author} date={blog.currentDate} body={blog.body} />
-                ))}
+            {blogs
+                .slice() // Create a copy of the array to avoid mutating the original array
+                .sort((a, b) => {
+                    const dateA = new Date(a.date);
+                    const dateB = new Date(b.date);
+        
+                    if (sorted == false)
+                        return dateB-dateA;
+                    else
+                        return dateA-dateB;
+                })
+                .map((blog) => (
+                    
+                    <BlogPost key={blog.id} avatar={blog.avatar} title={blog.title} author={blog.author} date={blog.date} body={blog.body} />
+                ))
+            }
             </div>
         );
 }

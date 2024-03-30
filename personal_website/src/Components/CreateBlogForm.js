@@ -6,12 +6,12 @@ const CreateBlogForm = (props) => {
   const[author, setAuthor] = useState('DennysGuy');
   const[avatar, setAvatar] = useState('https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg');
   const date = new Date();
-  const currentDate = date.toLocaleDateString();
+
   
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const blog = {title, body, author, avatar, currentDate}
+    const blog = {title, body, author, avatar, date}
     
     fetch(props.endpoint, {
       method: 'POST',

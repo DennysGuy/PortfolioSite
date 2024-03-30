@@ -4,7 +4,7 @@ const BlogPost = (props) => {
     
     /*
         blog post layout:
-         -- Top header will show username avatar, title of blog, posted by me on 'date' 
+         -- Top header will show user avatar, title of blog, posted by user on 'date' 
          -- conent of blog
          -- comment/likes section (use external service? create a user login for anyone? -- look into disqus)
          -- ingredients
@@ -20,7 +20,7 @@ const BlogPost = (props) => {
     return (
         
             <div className="my-10 mx-8 text-black">
-                <div className="flex flex-col rounded-xl overflow-hidden bg-zinc-300 max-w-[800px]">
+                <div className="flex flex-col shadow-xl rounded-xl overflow-hidden bg-zinc-300 md:w-[800px] h-[600px] max-h-[1000px] max-w-[1000px]">
                     <div className="flex bg-slate-400">
                         <img src={props.avatar} className="w-32 px-2 py-2 rounded-xl" />
                         <div className="flex flex-col">
