@@ -1,12 +1,12 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const CreateBlogForm = (props) => {
   const[title, setTitle] = useState('');
   const[body, setBody] = useState('');
-  const[author, setAuthor] = useState('DennysGuy');
-  const[avatar, setAvatar] = useState('https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg');
+  const author = props.author;
+  const avatar = props.avatar;
   const date = new Date();
-
+  const navigate = useNavigate();
   
 
   const handleSubmit = (e) => {
@@ -18,12 +18,15 @@ const CreateBlogForm = (props) => {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(blog)
     }).then(console.log("blog posted successfully"))
+
+   navigate(props.blogPage);
   }
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <div class="grid my-8">
+            <h1>{props.blogPage}</h1>
             <label class="italic font-bold text-2xl py-6">Title:</label>
             <input 
             required

@@ -46,6 +46,7 @@
       "username": "DennysGuy",
       "password": "zxcasdf123",
       "email": "mattmatriciano@gmail.com",
+      "avatar": "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg",
       "userid": "1",
       "id": "68a0"
     },
@@ -53,41 +54,12 @@
       "username": "Tanman200",
       "password": "password1",
       "email": "testemail@gmail.com",
+      "avatar": "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg",
       "userid": "2",
       "id": "d334"
-    },
-    {
-      "id": "537f",
-      "username": "Tanman",
-      "password": "zxc"
     }
   ],
-  "umleditor-blog": [
-    {
-      "id": "edd6",
-      "title": "test 1",
-      "body": "test1",
-      "author": "DennysGuy",
-      "avatar": "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg",
-      "date": "2024-03-30T02:03:28.563Z"
-    },
-    {
-      "id": "78f2",
-      "title": "test 2",
-      "body": "test2",
-      "author": "DennysGuy",
-      "avatar": "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg",
-      "date": "2024-03-30T02:03:39.845Z"
-    },
-    {
-      "id": "e030",
-      "title": "test 3",
-      "body": "test 3",
-      "author": "DennysGuy",
-      "avatar": "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg",
-      "date": "2024-03-30T02:26:17.682Z"
-    }
-  ],
+  "umleditor-blog": [],
   "devilstreasure-blog": [],
   "wtc-blog": [],
   "tetris-blog": []

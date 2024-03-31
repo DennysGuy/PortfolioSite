@@ -14,7 +14,9 @@ const BlogPage = (props) => {
         } else {
             setSortation(false);
         }
-    }
+    };
+
+
 
     return ( 
         <div>
@@ -22,6 +24,10 @@ const BlogPage = (props) => {
             <h1 className="flex underline font-bold text-4xl my-4 justify-center"> Dev Logs</h1>
             <div class="flex justify-between mt-8 mx-8">
                 {props.isLoggedin && <Link to={props.createBlogPage} class="px-1 py-1 hover:bg-slate-600 text-white text-lg rounded-xl border border-4  border-slate-500 hover:border-gray-300">create post</Link>}
+                <div className="flex space-x-4">
+                    <button className="bg-white h-6 text-black px-2 rounded-md">search</button>
+                    <input className="border border-black w-80 h-6 m-w-80 text-black rounded-md"/>
+                </div>
                 <button className="font-bold hover:underline" onClick={handleSortation}>sorted by {sort ? 'oldest first' : 'newest first' } </button>
             </div>
             <div class="mt-6">
@@ -29,7 +35,7 @@ const BlogPage = (props) => {
                     {error && <div>{error}</div>}
                     {isPending && <div>Loading Projects...</div>}
                     {isEmpty && <h1 className=" font-bold">There is currently no content here to display...</h1>}
-                    {blogs && <BlogList blogs={blogs} sorted={sort} />}
+                    {blogs && <BlogList blogs={blogs} sorted={sort} blogList={props.blogList} />}
                 </div>
             </div>
 

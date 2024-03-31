@@ -24,6 +24,7 @@ function App() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+
   const handleLogin = async (username, password) => {
     fetch(`http://localhost:8000/accounts`)
     .then(response => response.json())
@@ -32,7 +33,7 @@ function App() {
       accounts.forEach(account => {
         if (account.hasOwnProperty('username') && account.hasOwnProperty('password') &&
             account['username'] === username && account['password'] === password) {
-          setLoggedInStatus(true, username, password);
+          setLoggedInStatus(true, username, password, account['avatar'], account['email']);
           console.log("Login successful!");
 
           loggedIn = true;
@@ -49,10 +50,12 @@ function App() {
 
 
 
-  const setLoggedInStatus = (isLoggedIn, user, pass) => {
+  const setLoggedInStatus = (isLoggedIn, username, password, avatar, email) => {
     localStorage.setItem('isLoggedIn', isLoggedIn ? 'true' : 'false');
-    localStorage.setItem('username', user);
-    localStorage.setItem('password', pass);
+    localStorage.setItem('username', username);
+    localStorage.setItem('password', password);
+    localStorage.setItem('avatar', avatar);
+    localStorage.setItem('email', email);
 
     setTimeout(() => {
       window.location.reload();
@@ -71,6 +74,23 @@ function App() {
     return username;
   }
 
+  const getPassword = () => {
+    const password = localStorage.getItem('password');
+    return password
+  }
+
+  const getEmail = () => {
+    const email = localStorage.getItem('email');
+    return email;
+  }
+  
+  const getAvatar = () => {
+    const avatar = localStorage.getItem('avatar');
+    return avatar;
+  }
+
+
+
   return (
     <div className="bg-slate-800 text-gray-200">
       <Router>
@@ -81,17 +101,17 @@ function App() {
             <Route path="/prog-projects" element={<ProgrammingProjects />}/>
             <Route path="/music" element={<Music />}/>
             <Route path="/contact" element={<Contact />}/>
-            <Route path="/Login" element={<LoginPage username={username} password={password} setUsername={setUsername} setPassword={setPassword}handleLogin={handleLogin} isLoggedIn={getLoggedInStatus()} />}/>
-            <Route path="/AccountSettings" element={<AccountPage />}/>
+            <Route path="/Login" element={<LoginPage username={username} password={password} setUsername={setUsername} setPassword={setPassword} handleLogin={handleLogin} isLoggedIn={getLoggedInStatus()} />}/>
+            <Route path="/AccountSettings" element={<AccountPage username={getUsername()} password={getPassword()} avatar={getAvatar()} email={getEmail()} />}/>
             <Route path="/create-blog-page" element={<CreateBlogPage />}/>
             <Route path="/umleditor-blog" element={<UMLEditorBlog isLoggedIn={getLoggedInStatus()}/>} />
             <Route path="/wtc-blog" element={<WTCBlog isLoggedIn={getLoggedInStatus()} />} />
             <Route path="/devilstreasure-blog" element={<DevilsTreasureBlog isLoggedIn={getLoggedInStatus()} />} />
             <Route path="/tetris-blog" element={<TetrisBlog isLoggedIn={getLoggedInStatus()} />} />
-            <Route path="/create-uml-editor-blog" element={<CreateUMLBlogPage />} />
-            <Route path="/create-wtc-blog" element={<CreateWTCBlogPage />} />
-            <Route path="/create-dt-blog" element={<CreateDTBlogPage />} />
-            <Route path="/create-tetris-blog" element={<CreateTetrisBlogPage />} />
+            <Route path="/create-uml-editor-blog" element={<CreateUMLBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/umleditor-blog"/>} />
+            <Route path="/create-wtc-blog" element={<CreateWTCBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/wtc-blog" />} />
+            <Route path="/create-dt-blog" element={<CreateDTBlogPage author={getUsername()} avatar={getAvatar()} />} blogPage="/devilstreasure-blog" />
+            <Route path="/create-tetris-blog" element={<CreateTetrisBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/tetris-blog" />} />
           </Routes> 
         </main>  
       </Router>

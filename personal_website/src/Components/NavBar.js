@@ -1,14 +1,33 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import Linkedin_icon from 'D:/Projects/PortfolioSite/personal_website/src/LinkedIn_icon.svg';
+import GithubIcon from 'D:/Projects/PortfolioSite/personal_website/src/GithubIcon.svg'
 const NavBar = (props) => {
+
+    const [showSettings, setShowSettings] = useState(false);
+
+    const handleShowSettings = () => {
+        setShowSettings(!showSettings);
+    }
 
     const handleLogout = () => {
         props.setLoggedInStatus(false, '', '');
     }
 
-    return ( <div className="">
-        <div>
-            <h1 className="pl-5 font-bold text-4xl pt-8 border bg-slate-400">Matthew Matriciano</h1>
+    return ( 
+    <div className="">
+        <div className="pl-5 font-bold text-4xl pt-8 border bg-slate-500">
+            <div className="flex space-x-4">
+                <h1 className="shadow-2xl">Matthew Matriciano</h1>
+                <a href="https://www.linkedin.com/in/matt-matriciano-94b47a243/" target="_blank" className="transform hover:scale-110 transition ease-out duration-100">
+                    <img src={Linkedin_icon} alt="linked-in" className="h-8 w-8 mt-1"/>
+                </a>
+                <a href="https://github.com/DennysGuy" target="_blank" className="transform hover:scale-110 transition ease-out duration-100">
+                    <img src={GithubIcon} alt="linked-in" className="h-8 w-8 mt-1"/>
+                </a>
+                
+            </div>
+
         </div>
         <nav className="mt-4 mr-[-20px]">
             <div className="flex justify-between">

@@ -13,6 +13,7 @@ const LoginPage = ({username, password, setUsername, setPassword, handleLogin, i
     const handleSubmit = (e) => {
             e.preventDefault();
             handleLogin(username, password);
+            navigate(-1)
 
     }
 

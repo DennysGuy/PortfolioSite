@@ -1,6 +1,6 @@
 import Comments from "./Comments";
 import { Link } from "react-router-dom";
-const BlogPost = (props) => {
+const BlogPost = ({id, avatar, title, author, date, body, blogs, blogPage}) => {
     
     /*
         blog post layout:
@@ -16,21 +16,46 @@ const BlogPost = (props) => {
                     -- user needs their own unique pseudoname (username) account settings?
                     -- user needs their own unique password
     */
+   const deleteEntry = () => {
+    const blog = blogs + "/" + id;
+    console.log(blog);
+    fetch(blog, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(response=> {
+        if (!response.ok) {
+            throw new Error('Network response was not ok')
+        }
+        return response.json();
+    }).then(data=> {
+        console.log('Entry deleted successfully', data);
+    }).catch(error => {
+        console.error('Error deleting entry:', error);
+    })
+
+    
+
+   }
     
     return (
         
             <div className="my-10 mx-8 text-black">
                 <div className="flex flex-col shadow-xl rounded-xl overflow-hidden bg-zinc-300 md:w-[800px] h-[600px] max-h-[1000px] max-w-[1000px]">
                     <div className="flex bg-slate-400">
-                        <img src={props.avatar} className="w-32 px-2 py-2 rounded-xl" />
+                        <img src={avatar} className="w-32 px-2 py-2 rounded-xl" />
                         <div className="flex flex-col">
-                            <h1 className="font-bold text-xl">{props.title}</h1>
-                            <p>Posted by <span className="font-bold">{props.author} </span>on <span className="font-bold">{props.date}</span></p>
+                            <h1 className="font-bold text-xl">{title}</h1>
+                            <p>Posted by <span className="font-bold">{author} </span>on <span className="font-bold">{date}</span></p>
+                    
                         </div>
+                        
                     </div>
-                    <p className="whitespace-pre-wrap py-8 px-8 max-w-[800px]">
-                        {props.body}
+                    <p className="whitespace-pre-wrap py-8 px-8 max-w-[800px] h-[420px] max-h-[420px]">
+                        {body}
                     </p>
+                    <button onClick={deleteEntry}className="pt-4 transform hover:bold hover:scale-110 transition ease-out duration-100">delete</button>
                 </div>
             </div>
         
