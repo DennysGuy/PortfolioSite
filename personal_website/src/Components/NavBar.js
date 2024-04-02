@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Linkedin_icon from 'C:/Users/Mattx/projects/PortfolioSite/personal_website/src/LinkedIn_icon.svg';
-import GithubIcon from 'C:/Users/Mattx/projects/PortfolioSite/personal_website/src/GithubIcon.svg';
-import menuhamgurger from 'C:/Users/Mattx/projects/PortfolioSite/personal_website/src/menuburger.svg';
+import Linkedin_icon from '../LinkedIn_icon.svg';
+import GithubIcon from '../GithubIcon.svg';
+import menuhamgurger from '../menuburger.svg';
 const NavBar = (props) => {
 
     const [showSettings, setShowSettings] = useState(false);
@@ -21,7 +21,7 @@ const NavBar = (props) => {
     }
 
     return ( 
-    <div className=""> 
+    <div className="w-full"> 
         <div className="pl-5 font-bold  text-2xl md:text-4xl pt-8 border bg-slate-500">
             <div className="grid md:flex md:space-x-4">
                 <h1 className="shadow-2xl">Matthew Matriciano</h1>
@@ -37,31 +37,29 @@ const NavBar = (props) => {
             </div>
         </div>
         <nav className="mr-[-20px]">
-            <div className="flex justify-between">
+            <div className="flex">
                 <div className="grid">
                     <button onClick={handleDisplayOptions} >
-                        <img src={menuhamgurger} className ="w-10 lg:hidden ml-6 mb-6 bg-gray-300 rounded-lg hover:cursor-pointer" />
+                        <img src={menuhamgurger} className =" bg-slate-600 w-10 lg:hidden ml-6 mb-6 rounded-sm hover:cursor-pointer" />
                     </button>
                     
-                    <div className={`${displayOptions ? 'grid space-y-6' : 'hidden'} md:flex`}>
+                    <div className={`${displayOptions ? 'grid' : 'hidden'} md:flex`}>
                         <Link to="/" className="mx-6 hover:underline transform hover:scale-110 ease-out duration-150">Biography</Link>
                         <Link to="/prog-projects" className="mx-6 hover:underline transform hover:scale-110 ease-out duration-150">Programming Projects</Link>
                         <Link to="/music" className="mx-6 hover:underline transform hover:scale-110 ease-out duration-150">Music</Link>
                         <Link to="/contact" className="mx-6 hover:underline transform hover:scale-110 ease-out duration-150">Contact</Link>
                     </div>
 
-                   
-
                 </div>
-                <div>
+                <div className="px-12">
                     {props.isLoggedIn && 
-                    <div className="flex px-12">
-                        <p className="px-12">Welcome {props.username}!</p>
-                        <Link to="/AccountSettings" className="hover:underline">Account</Link>
-                        <button onClick={handleLogout} className="ml-12 hover:underline">Log out</button>
+                    <div className="login-hub">
+                        <p className="">Welcome, {props.username}!</p>
+                        <Link to="/AccountSettings" className="hover:underline transform hover:scale-110 ease-out duration-150">Account</Link>
+                        <button onClick={handleLogout} className="ml-8 hover:underline transform hover:scale-110 ease-out duration-150">Log out</button>
                     </div>
                     }
-                    {!props.isLoggedIn && <Link to="/Login" className="underline px-12">Admin Login</Link>}
+                    {!props.isLoggedIn && <Link to="/Login" className="hover:underline ">Admin Login</Link>}
                 </div>
             </div>
 

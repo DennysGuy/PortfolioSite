@@ -14,6 +14,7 @@ const LoginPage = ({username, password, setUsername, setPassword, handleLogin, i
             e.preventDefault();
             handleLogin(username, password);
             navigate(-1)
+            
 
     }
 
