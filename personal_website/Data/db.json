@@ -42,7 +42,13 @@
     }
   ],
   "music": [
-    
+    {
+      "title": "The Last Stand",
+      "albumart":"",
+      "description":"The Last Stand is a theme written for the main level in my game: Binder's Regime. The song aims to deliver a sense of a dire setting by emitting a pulse pounding beat with epic melodies created by synthesizers and sampled brass instruments.",
+      "genre": "Electronic/Metal",
+      "songfile": "https://www.dropbox.com/scl/fi/1wok911pxawls2760vrkt/The_Last_Stand.wav?rlkey=39wqliu9zqjrdob5j2b42eim1&dl=1"
+    }
   ],
   "accounts": [
     {
