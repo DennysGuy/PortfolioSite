@@ -7,7 +7,7 @@ const UMLEditorBlog = (props) => {
 
   return(
     <div>
-      <BlogPage isLoggedin={props.isLoggedIn} createBlogPage={createBlogPage} blogList={bloglist} pageHeader={header} />
+      <BlogPage isLoggedIn={props.isLoggedIn} createBlogPage={createBlogPage} blogList={bloglist} pageHeader={header} />
     </div>
 
   );

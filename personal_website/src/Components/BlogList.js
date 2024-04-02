@@ -1,6 +1,6 @@
 import BlogPost from "./BlogPost";
 
-const BlogList = ({blogs, sorted, blogList, blogPage}) => {
+const BlogList = ({blogs, sorted, blogList, blogPage, isLoggedIn}) => {
     /*
         -- A blog list will contain a list of blogs 
         -- On the blog page, in admin mode, an admin will be able to create a post 
@@ -26,7 +26,7 @@ const BlogList = ({blogs, sorted, blogList, blogPage}) => {
                 })
                 .map((blog) => (
                     
-                    <BlogPost id={blog.id} avatar={blog.avatar} title={blog.title} author={blog.author} date={blog.date} body={blog.body} blogs={blogList} blogPage={blogPage}/>
+                    <BlogPost id={blog.id} avatar={blog.avatar} title={blog.title} author={blog.author} date={blog.date} body={blog.body} blogs={blogList} blogPage={blogPage} isLoggedIn={isLoggedIn}/>
                 ))
             }
             </div>

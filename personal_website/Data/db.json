@@ -44,8 +44,8 @@
   "music": [
     {
       "title": "The Last Stand",
-      "albumart":"",
-      "description":"The Last Stand is a theme written for the main level in my game: Binder's Regime. The song aims to deliver a sense of a dire setting by emitting a pulse pounding beat with epic melodies created by synthesizers and sampled brass instruments.",
+      "albumart": "",
+      "description": "The Last Stand is a theme written for the main level in my game: Binder's Regime. The song aims to deliver a sense of a dire setting by emitting a pulse pounding beat with epic melodies created by synthesizers and sampled brass instruments.",
       "genre": "Electronic/Metal",
       "songfile": "https://www.dropbox.com/scl/fi/1wok911pxawls2760vrkt/The_Last_Stand.wav?rlkey=39wqliu9zqjrdob5j2b42eim1&dl=1"
     }
@@ -79,6 +79,15 @@
     }
   ],
   "devilstreasure-blog": [],
-  "wtc-blog": [],
+  "wtc-blog": [
+    {
+      "id": "fe6a",
+      "title": "Created Skeleton for Navigating Application",
+      "body": "\nToday, I implemented a basic skeleton so that we can start developing pages for the application.\nThis include an app bar, nav bar, and 5 empty pages assigned to the nav bar buttons.\n\nThe app bar includes:\n       - title of the application\n       - hamburger menu button (no functionality as of current)\n\nThe nav bar includes:\n      - a nav button for five pages including: alerts page, map page, home page, calendar page, and accounts page\n\nThis was a great experience as I got a little more hands on experience with Flutter. I got to tinker with widgets - nesting them, and creating my own custom widgets for pages and the nav bar buttons. The nav bar button widget was designed to be reused - so this widget will take in a few arguments in order to work. Luckily, this cuts down on the effort needed to set up the UI. \n",
+      "author": "DennysGuy",
+      "avatar": "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg",
+      "date": "2024-04-02T22:37:13.446Z"
+    }
+  ],
   "tetris-blog": []
 }

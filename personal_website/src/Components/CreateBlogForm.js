@@ -23,7 +23,7 @@ const CreateBlogForm = (props) => {
    setTimeout(() => {
     window.location.reload();
     
-   }, 10);
+   }, 50);
 
   }
 
@@ -38,7 +38,7 @@ const CreateBlogForm = (props) => {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             type="text"
-            class="text-black border border-black w-96 rounded-lg"> 
+            class="text-black border border-black w-[600px] rounded-lg"> 
             </input>
             
             <h1 className="mt-6 font-bold text-xl">adding to: {props.blog} </h1>
@@ -48,7 +48,7 @@ const CreateBlogForm = (props) => {
             required
             value={body}
             onChange={(e) => setBody(e.target.value)}   
-            class="text-black border border-black h-96 max-w-[1000px] rounded-lg resize-none">
+            class="text-black border border-black h-96 w-[800px] max-w-[800px] rounded-lg resize-none">
             </textarea>
             
         </div>

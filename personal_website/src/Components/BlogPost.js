@@ -1,6 +1,6 @@
 import Comments from "./Comments";
 import { Link } from "react-router-dom";
-const BlogPost = ({id, avatar, title, author, date, body, blogs, blogPage}) => {
+const BlogPost = ({id, avatar, title, author, date, body, blogs, blogPage, isLoggedIn}) => {
     
     /*
         blog post layout:
@@ -42,7 +42,6 @@ const BlogPost = ({id, avatar, title, author, date, body, blogs, blogPage}) => {
    }
     
     return (
-        
             <div className="my-10 mx-8 text-black">
                 <div className="flex flex-col shadow-xl rounded-xl overflow-hidden bg-zinc-300 md:w-[800px] h-[600px] max-h-[1000px] max-w-[1000px]">
                     <div className="flex bg-slate-400">
@@ -50,14 +49,15 @@ const BlogPost = ({id, avatar, title, author, date, body, blogs, blogPage}) => {
                         <div className="flex flex-col">
                             <h1 className="font-bold text-xl">{title}</h1>
                             <p>Posted by <span className="font-bold">{author} </span>on <span className="font-bold">{date}</span></p>
-                    
+                            
                         </div>
-                        
+                        {isLoggedIn && <Link to="" class="hover:underline pl-40">edit post</Link>}
                     </div>
                     <p className="whitespace-pre-wrap py-8 px-8 max-w-[800px] h-[420px] max-h-[420px]">
                         {body}
                     </p>
-                    <button onClick={deleteEntry}className="pt-4 transform hover:bold hover:scale-110 transition ease-out duration-100">delete</button>
+                    {isLoggedIn && <button onClick={deleteEntry}className="pt-4 transform hover:bold hover:scale-110 hover:underline transition ease-out duration-100">delete post</button>}
+                    
                 </div>
             </div>
         
