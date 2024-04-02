@@ -10,7 +10,7 @@ const Song = ({song, title, albumArt, description }) => {
                 <div className="bg-white m-4 rounded-md shadow-xl">
                     <p className="p-4 ">{description}</p>
                     <audio id="audioPlayer" controls className='px-4 py-4 w-full'>
-                        <source src="https://www.mediafire.com/file/sor3tgh92j9kmxj/Accelerate.mp3/file" type="audio/mpeg" />
+                        <source src={song} type="audio/mpeg" />
                         Your browser does not support the audio element.
                     </audio>
                 </div>
