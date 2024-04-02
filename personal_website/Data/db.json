@@ -41,6 +41,9 @@
       "id": "4"
     }
   ],
+  "music": [
+    
+  ],
   "accounts": [
     {
       "username": "DennysGuy",
@@ -59,7 +62,16 @@
       "id": "d334"
     }
   ],
-  "umleditor-blog": [],
+  "umleditor-blog": [
+    {
+      "id": "68a1",
+      "title": "sfsf",
+      "body": "sfsfsf",
+      "author": "DennysGuy",
+      "avatar": "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg",
+      "date": "2024-04-02T19:11:29.141Z"
+    }
+  ],
   "devilstreasure-blog": [],
   "wtc-blog": [],
   "tetris-blog": []

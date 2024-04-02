@@ -20,6 +20,11 @@ const CreateBlogForm = (props) => {
     }).then(console.log("blog posted successfully"))
 
    navigate(props.blogPage);
+   setTimeout(() => {
+    window.location.reload();
+    
+   }, 10);
+
   }
 
   return (

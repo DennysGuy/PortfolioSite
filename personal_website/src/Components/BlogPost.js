@@ -35,8 +35,10 @@ const BlogPost = ({id, avatar, title, author, date, body, blogs, blogPage}) => {
         console.error('Error deleting entry:', error);
     })
 
-    
-
+    setTimeout(() => {
+        window.location.reload();
+        
+      }, 50);
    }
     
     return (
