@@ -1,7 +1,7 @@
 import CreateBlogForm from "../../Components/CreateBlogForm";
 const CreateTetrisBlogPage = ({author, avatar, blogPage}) => {
 
-  const endpoint = "http://localhost:8000/tetris-blog"
+  const endpoint = "http://localhost:8000/tetris_blogs"
   const blog = "Tetris blog"
 
   return (

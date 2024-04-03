@@ -1,7 +1,7 @@
 import BlogPage from "./BlogPage";
 
 const TetrisBlog = (props) => {
-  const bloglist = 'http://localhost:8000/tetris-blog';
+  const bloglist = 'http://localhost:8000/tetris_blogs';
   const createBlogPage = '/create-tetris-blog'
   const header = "Tetris Blog"
 

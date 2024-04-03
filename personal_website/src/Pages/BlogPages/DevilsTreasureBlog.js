@@ -1,7 +1,7 @@
 import BlogPage from "./BlogPage";
 
 const DevilsTreasureBlog = ({isLoggedIn}) => {
-  const bloglist = 'http://localhost:8000/devilstreasure-blog';
+  const bloglist = 'http://localhost:8000/devilstreasure_blogs';
   const createBlogPage = '/create-dt-blog'
   const header = "Devil's Treasure Blog"
 

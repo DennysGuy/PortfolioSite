@@ -2,7 +2,7 @@
 import CreateBlogForm from "../../Components/CreateBlogForm";
 const CreateWTCBlogPage = ({author, avatar, blogPage}) => {
 
-  const endpoint = "http://localhost:8000/wtc-blog"
+  const endpoint = "http://localhost:8000/wtc_blogs"
   const blog = "WTC blog"
   
   return (

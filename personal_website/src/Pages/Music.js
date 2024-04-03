@@ -3,7 +3,7 @@ import SongList from '../Components/SongList';
 import useFetch from '../Components/useFetch';
 const Music = () => {
     
-    const {data: songs, isPending, error} = useFetch('http://localhost:8000/music')
+    const {data: songs, isPending, error} = useFetch('http://localhost:8000/songs')
  
     return ( 
         <div>

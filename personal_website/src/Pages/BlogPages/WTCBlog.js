@@ -1,7 +1,7 @@
 import BlogPage from "./BlogPage";
 
 const WTCBlog = (props) => {
-  const bloglist = 'http://localhost:8000/wtc-blog';
+  const bloglist = 'http://localhost:8000/wtc_blogs';
   const createBlogPage = '/create-wtc-blog'
   const header = "Welcome To Cheney Blog"
 

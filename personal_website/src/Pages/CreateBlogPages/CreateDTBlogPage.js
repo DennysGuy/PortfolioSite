@@ -1,7 +1,7 @@
 import CreateBlogForm from "../../Components/CreateBlogForm";
 const CreateDTBlogPage = ({author, avatar, blogPage}) => {
 
-  const endpoint = "http://localhost:8000/devilstreasure-blog"
+  const endpoint = "http://localhost:8000/devilstreasure_blogs"
   const blog = "Devil's Treasure blog"
 
   return (
