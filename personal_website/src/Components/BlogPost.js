@@ -1,5 +1,6 @@
 import Comments from "./Comments";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const BlogPost = ({id, avatar, title, author, date, body, blogs, blogPage, isLoggedIn}) => {
     
     /*
@@ -26,7 +27,7 @@ const BlogPost = ({id, avatar, title, author, date, body, blogs, blogPage, isLog
         }
     }).then(response=> {
         if (!response.ok) {
-            throw new Error('Network response was not ok')
+            throw new Error('Network response was not ok');
         }
         return response.json();
     }).then(data=> {

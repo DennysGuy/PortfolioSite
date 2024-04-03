@@ -19,6 +19,7 @@ import CreateWTCBlogPage from './Pages/CreateBlogPages/CreateWTCBlogPage';
 import CreateDTBlogPage from './Pages/CreateBlogPages/CreateDTBlogPage';
 import CreateTetrisBlogPage from './Pages/CreateBlogPages/CreateTetrisBlogPage';
 import axios from 'axios';
+import EditBlogPostPage from './Pages/EditBlogPost';
 
 function App() {
   const [username, setUsername] = useState('');
@@ -108,10 +109,11 @@ function App() {
             <Route path="/wtc-blog" element={<WTCBlog isLoggedIn={getLoggedInStatus()} />} />
             <Route path="/devilstreasure-blog" element={<DevilsTreasureBlog isLoggedIn={getLoggedInStatus()} />} />
             <Route path="/tetris-blog" element={<TetrisBlog isLoggedIn={getLoggedInStatus()} />} />
-            <Route path="/create-uml-editor-blog" element={<CreateUMLBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/umleditor-blog"/>} />
-            <Route path="/create-wtc-blog" element={<CreateWTCBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/wtc-blog" />} />
-            <Route path="/create-dt-blog" element={<CreateDTBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/devilstreasure-blog" />} />
-            <Route path="/create-tetris-blog" element={<CreateTetrisBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/tetris-blog" />} />
+            <Route path="/umleditor-blog/createblog" element={<CreateUMLBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/umleditor-blog"/>} />
+            <Route path="/wtc-blog/createblog" element={<CreateWTCBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/wtc-blog" />} />
+            <Route path="/devilstreasure-blog/createblog" element={<CreateDTBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/devilstreasure-blog" />} />
+            <Route path="/tetris-blog/createblog" element={<CreateTetrisBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/tetris-blog" />} />
+            <Route path="/:blog/editblog/:id" element={<EditBlogPostPage />} />
           </Routes> 
         </main>  
       </Router>
