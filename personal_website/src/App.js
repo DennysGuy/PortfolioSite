@@ -113,7 +113,7 @@ function App() {
             <Route path="/wtc-blog/createblog" element={<CreateWTCBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/wtc-blog" />} />
             <Route path="/devilstreasure-blog/createblog" element={<CreateDTBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/devilstreasure-blog" />} />
             <Route path="/tetris-blog/createblog" element={<CreateTetrisBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/tetris-blog" />} />
-            <Route path="/:blog/editblog/:id" element={<EditBlogPostPage />} />
+            <Route path="/blog/:editblog/id" element={<EditBlogPostPage />} />
           </Routes> 
         </main>  
       </Router>
