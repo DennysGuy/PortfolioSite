@@ -16,8 +16,6 @@ const BlogPage = (props) => {
         }
     };
 
-
-
     return ( 
         <div>
             <h1 className="page-header">{props.pageHeader}</h1>

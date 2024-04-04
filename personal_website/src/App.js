@@ -25,7 +25,6 @@ function App() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-
   const handleLogin = async (username, password) => {
     fetch(`http://localhost:8000/accounts`)
     .then(response => response.json())
@@ -48,8 +47,6 @@ function App() {
       console.error('Error:', error);
     });
   };
-
-
 
   const setLoggedInStatus = (isLoggedIn, username, password, avatar, email) => {
     localStorage.setItem('isLoggedIn', isLoggedIn ? 'true' : 'false');
@@ -90,8 +87,6 @@ function App() {
     return avatar;
   }
 
-
-
   return (
     <div className="bg-slate-800 text-gray-200">
       <Router>
@@ -113,7 +108,7 @@ function App() {
             <Route path="/wtc-blog/createblog" element={<CreateWTCBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/wtc-blog" />} />
             <Route path="/devilstreasure-blog/createblog" element={<CreateDTBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/devilstreasure-blog" />} />
             <Route path="/tetris-blog/createblog" element={<CreateTetrisBlogPage author={getUsername()} avatar={getAvatar()} blogPage="/tetris-blog" />} />
-            <Route path="/blog/:editblog/id" element={<EditBlogPostPage />} />
+            <Route exact path="/edit/:blog/:id" element={<EditBlogPostPage />} />
           </Routes> 
         </main>  
       </Router>

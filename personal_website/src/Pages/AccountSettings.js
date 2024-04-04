@@ -63,8 +63,6 @@ const AccountPage = ({username, password, avatar, email}) => {
                        
                     </div>
 
-                    
-
                 </div>
             </div>
         </div>

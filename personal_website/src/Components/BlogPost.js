@@ -2,7 +2,7 @@ import Comments from "./Comments";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 const BlogPost = ({id, avatar, title, author, date, body, blogs, blogPage, isLoggedIn}) => {
-    
+    const ep = blogs.slice(22);
     /*
         blog post layout:
          -- Top header will show user avatar, title of blog, posted by user on 'date' 
@@ -52,13 +52,16 @@ const BlogPost = ({id, avatar, title, author, date, body, blogs, blogPage, isLog
                             <p>Posted by <span className="font-bold">{author} </span>on <span className="font-bold">{date}</span></p>
                             
                         </div>
-                        {isLoggedIn && <Link to="" class="hover:underline pl-40">edit post</Link>}
+                        
                     </div>
                     <p className="whitespace-pre-wrap py-8 px-8 max-w-[800px] h-[420px] max-h-[420px]">
                         {body}
                     </p>
-                    {isLoggedIn && <button onClick={deleteEntry}className="pt-4 transform hover:bold hover:scale-110 hover:underline transition ease-out duration-100">delete post</button>}
-                    
+                    <div className="flex justify-center">
+                        {isLoggedIn && <Link to={`/edit/${ep}/${id}`} class="hover:underline pt-4 pr-6">edit</Link>} 
+                        {isLoggedIn && <button onClick={deleteEntry}className="pt-4 hover:bold hover:underline">delete</button>}   
+                    </div>
+
                 </div>
             </div>
         

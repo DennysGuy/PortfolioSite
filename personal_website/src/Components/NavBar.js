@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Linkedin_icon from '../LinkedIn_icon.svg';
 import GithubIcon from '../GithubIcon.svg';
 import menuhamgurger from '../menuburger.svg';
+import SoundCloudIcon from '../soundcloud-tile.svg';
 const NavBar = (props) => {
 
     const [showSettings, setShowSettings] = useState(false);
@@ -29,9 +30,13 @@ const NavBar = (props) => {
                     <a href="https://www.linkedin.com/in/matt-matriciano-94b47a243/" target="_blank" className="transform hover:scale-110 transition ease-out duration-100">
                         <img src={Linkedin_icon} alt="linked-in" className="h-8 w-8 mt-1"/>
                     </a>
+                    <a href="https://soundcloud.com/mmatriks" target="_blank" className="transform hover:scale-110 transition ease-out duration-100">
+                        <img src={SoundCloudIcon} alt="linked-in" className="h-8 w-8 mt-1"/>
+                    </a>
                     <a href="https://github.com/DennysGuy" target="_blank" className="transform hover:scale-110 transition ease-out duration-100">
                         <img src={GithubIcon} alt="linked-in" className="h-8 w-8 mt-1"/>
                     </a>
+
                 </div>
 
             </div>

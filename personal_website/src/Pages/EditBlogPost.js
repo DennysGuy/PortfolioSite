@@ -1,15 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import CreateBlogForm from "../Components/CreateBlogForm";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const EditBlogPostPage = ({id, endpoint, blogPage}) => {
-    const log = `${endpoint}/${id}`;
+const EditBlogPostPage = () => {
+    const {endpoint, id} = useParams();
 
-    const[title, setTitle] = useState('');
+    const log = `http://localhost:8000/wtc_blogs/${id}`;
+
+    const[title, setTitle] = useState('')
     const[body, setBody] = useState('');
-    const author = "";
-    const avatar = "";
-    const date = null;
+    const [author, setAuthor] = useState('');
+    const [avatar, setAvatar] = useState('');
+    const [date, setDate] = useState('');
     const navigate = useNavigate();
     
     useEffect(()=> {
@@ -21,11 +23,11 @@ const EditBlogPostPage = ({id, endpoint, blogPage}) => {
             }
             return res.json();})
             .then(data => {
-                title = data.title;
-                body = data.body;
-                author = data.author;
-                avatar = data.avatar;
-                date = data.date;
+                setTitle(data.title);
+                setBody(data.body);
+                setAuthor(data.author);
+                setAvatar(data.avatar);
+                setDate(data.date);
 
             }).catch(error => {
                 console.log(error.message);
@@ -34,13 +36,13 @@ const EditBlogPostPage = ({id, endpoint, blogPage}) => {
 
     const handleSubmit =(e)=> {
         e.preventDefault();
-        const update = {title, body, author, avatar}
+        const update = {title, body, author, avatar, date}
         fetch(log, {
             method: 'PUT',
             header: {
                 'Content-Type' : 'application/json'
             },
-            body: JSON.stringify(update).then(console.log("log has been update!"))
+            body: JSON.stringify(update)
         }).then(response => {
             if (!response.ok) {
               throw new Error('Network response was not ok');
@@ -54,19 +56,20 @@ const EditBlogPostPage = ({id, endpoint, blogPage}) => {
             console.error('There was a problem updating the data:', error);
           });
 
-          navigate(blogPage);
+          navigate(-1);
+          
           setTimeout(() => {
             window.location.reload();
             
-          }, 50);
+          }, 100);
 
     }
     
     return ( 
-        <div>
+        <div className="grid justify-center">
         <form onSubmit={handleSubmit}>
+          
           <div class="grid my-8">
-              <h1>{props.blogPage}</h1>
               <label class="italic font-bold text-2xl py-6">Title:</label>
               <input 
               required
@@ -76,8 +79,6 @@ const EditBlogPostPage = ({id, endpoint, blogPage}) => {
               class="text-black border border-black w-[600px] rounded-lg"> 
               </input>
               
-              <h1 className="mt-6 font-bold text-xl">adding to: {props.blog} </h1>
-  
               <label class="italic font-bold text-2xl py-6">Body:</label>
               <textarea
               required
