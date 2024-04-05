@@ -10,6 +10,10 @@ const BlogList = ({blogs, sorted, blogList, blogPage, isLoggedIn}) => {
     */
     
 
+        /**
+         * with a little bit of research, being able to sort my blog posts wasn't too difficult. It was simply looping through 
+         * the available posts and comparing the dates of two blogs -- to sort descending I would compare on dateB to A and ascending would be A to B
+         */
         return (  
             <div class="grid  justify-center my-4">
             {blogs
@@ -24,6 +28,7 @@ const BlogList = ({blogs, sorted, blogList, blogPage, isLoggedIn}) => {
                     else
                         return dateA-dateB;
                 })
+                //mapping is a function that runs through the database -- it is akin to a for each loop as it lets me nickname each entry and from there, I can retrieve any data points from that entry.
                 .map((blog) => (
                     
                     <BlogPost id={blog.id} avatar={blog.avatar} title={blog.title} author={blog.author} date={blog.date} body={blog.body} blogs={blogList} blogPage={blogPage} isLoggedIn={isLoggedIn}/>

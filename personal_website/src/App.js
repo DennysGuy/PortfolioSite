@@ -25,6 +25,23 @@ function App() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  /**
+   * ultimately, App.js is the initial component to the application 
+   * -- it handles routing of the pages, and logging in of the user
+   * 
+   * handleLogin will check the endpoint containing all of the logins available and will check if the user 
+   * and password exist -- if so, the login process will execute
+   * 
+   * ** this is currently not an optimal way of doing things. There is no user authentication 
+   * or encryption -- username and password are just plain text 
+   * authentication system and encryption will be future tasks.. towards deployment of website
+   * 
+   * ** the create blog pages can be refactored to be much more scalable. These pages were created 
+   * before learning about the useParam hook.
+   * 
+   * @param {} username 
+   * @param {*} password 
+   */
   const handleLogin = async (username, password) => {
     fetch(`http://localhost:8000/accounts`)
     .then(response => response.json())
@@ -48,6 +65,19 @@ function App() {
     });
   };
 
+  /**
+   * This function will take the user information and store it locally on the person's browser
+   * The purpose of this is to make the user's login info easily reachable and also so the login state 
+   * persists if the user refreshes the page or closes the browser.
+   * 
+   * The user's login info can also be stored in cache for easier log in time.
+   * @param {
+   * } isLoggedIn 
+   * @param {*} username 
+   * @param {*} password 
+   * @param {*} avatar 
+   * @param {*} email 
+   */
   const setLoggedInStatus = (isLoggedIn, username, password, avatar, email) => {
     localStorage.setItem('isLoggedIn', isLoggedIn ? 'true' : 'false');
     localStorage.setItem('username', username);
@@ -86,7 +116,7 @@ function App() {
     const avatar = localStorage.getItem('avatar');
     return avatar;
   }
-
+ 
   return (
     <div className="bg-slate-800 text-gray-200">
       <Router>

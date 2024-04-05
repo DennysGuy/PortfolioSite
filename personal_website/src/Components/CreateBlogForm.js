@@ -9,6 +9,10 @@ const CreateBlogForm = (props) => {
   const navigate = useNavigate();
   
 
+  /**
+   * handleSubmit will simply make a POST request to a desired endpoint and will create a new blog entry.
+   * @param {*} e 
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
     const blog = {title, body, author, avatar, date}

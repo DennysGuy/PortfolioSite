@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
 
+/**
+ * right now, a song will simply give a link to where the audio file is being stored
+ * I'm still working out a way to establish a reliable way to host and play audio files
+ * -- drop box didn't work as well as I wanted, and other hosting sites that I've tried didn't work at all
+ * @param {} param0 
+ * @returns 
+ */
+
 const Song = ({song, genre, title, albumArt, description }) => {
     return (             
             <div className="flex flex-col max-w-[600px] max-h-[600px] bg-slate-300 rounded-lg text-black mx-4 my-4 shadow-xl">

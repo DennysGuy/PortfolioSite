@@ -6,6 +6,12 @@ import menuhamgurger from '../menuburger.svg';
 import SoundCloudIcon from '../soundcloud-tile.svg';
 const NavBar = (props) => {
 
+    /**
+     * The Nav Bar does a little more than allow us to navigate the page
+     * It will also harbor the admin login, account settings, and log out buttons
+     * **Also provides icons containing links to socials
+     * 
+     */
     const [showSettings, setShowSettings] = useState(false);
     const [displayOptions, setDisplayOptions] = useState(false);
 
@@ -67,8 +73,6 @@ const NavBar = (props) => {
                     {!props.isLoggedIn && <Link to="/Login" className="hover:underline ">Admin Login</Link>}
                 </div>
             </div>
-
-            
         </nav>
     </div> );
 }

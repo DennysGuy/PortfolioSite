@@ -42,6 +42,25 @@ const BlogPost = ({id, avatar, title, author, date, body, blogs, blogPage, isLog
       }, 50);
    }
     
+   /**
+    * creating a blog post was partially straight forward. 
+    * The most difficult tasks was giving capability for deleting and editing a specific post
+    * 
+    * **editing and deleting both require to grab an ID of the post
+    *   
+    *  editing was a bit of a  learning curve and it took a little while for me to figure out how to retrieve post information
+    *  for obvious reasons, it didn't make sense to make an edit post for every single post as this is not a very scalable method
+    *  so, the solution was to make the route link harbor dynamic parameters (this was achieved by placing a ':' infront of a parameter)
+    *  This made it simple as passing the blog post's ID and the endpoint it belonged to the blog post card.
+    *  Finally, I'll create a link button which the link will contain the endpoint and ID prop. The end point did have to first be trimmed
+    *  as the database doesn't contain the website link (in my case local host link).
+    * 
+    *  another road block was displaying certain buttons if a user is logged in on a page or not. This required passing in a 'isLoggedIn' boolean
+    *  several layers deep. I ran into a silly bug that was chalked up to a very minor yet easy to miss syntax error (which was using a lower case 
+    *  when I initially put an uppercase) 
+    * 
+    */
+
     return (
             <div className="my-10 mx-8 text-black">
                 <div className="flex flex-col shadow-xl rounded-xl overflow-hidden bg-zinc-300 md:w-[800px] h-[600px] max-h-[1000px] max-w-[1000px]">
