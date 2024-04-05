@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Song = ({song, genre, title, albumArt, description }) => {
     return (             
             <div className="flex flex-col max-w-[600px] max-h-[600px] bg-slate-300 rounded-lg text-black mx-4 my-4 shadow-xl">
@@ -12,10 +14,7 @@ const Song = ({song, genre, title, albumArt, description }) => {
                 
                 <div className="bg-white m-4 rounded-md shadow-xl">
                     <p className="p-4 ">{description}</p>
-                    <audio id="audioPlayer" controls className='px-4 py-4 w-full'>
-                        <source src={song} type="audio/wav" />
-                        Your browser does not support the audio element.
-                    </audio>
+                    <Link to={song} className="m-4 text-blue-600 hover:underline">Link to song</Link>
                 </div>
             </div>
      );

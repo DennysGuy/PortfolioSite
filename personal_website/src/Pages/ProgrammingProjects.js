@@ -8,14 +8,23 @@ const ProgrammingProjects = () => {
     
     const {data: projects, isPending, error} = useFetch('http://localhost:8000/projects');
     return (  
-        <div class="">
-            <h1 class="page-header">Programming Projects</h1>
-            <div class="pt-8">
-                {error && <div>{error}</div>}
-                {isPending && <div>Loading Projects...</div>}
-                {projects && <ProjectList projects={projects}/>}
-            </div>
+        <div className="">
+            <h1 className="page-header hidden lg:block ">Programming Projects</h1>
+            <h1 className="page-header lg:hidden">Projects</h1>
+            
+            <div className="grid justify-center pt-8">
+                <p className="max-w-[600px] ml-6 lg:ml-56 ">This is a list of some of my most recent programming projects - personal and school related. 
+                    To view a blog for a particular project, click on the title page. You can also view
+                    the respective github repository by clicking the github repository link.
+                </p>
+                <div className="pt-8">
+                    {error && <div>{error}</div>}
+                    {isPending && <div>Loading Projects...</div>}
+                    {projects && <ProjectList projects={projects}/>}
+                </div>
 
+            </div>
+           
         </div>
     );
 }

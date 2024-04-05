@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "UML Editor",
-      "type": "Windows/Mac",
+      "platform": "Windows/Mac",
       "image": "https://www.umlet.com/pic/umlet_screenshot.png",
       "alt_id": "uml-editor",
       "description": "The UML Editor was developed during my Software Development principles class (CSCD350). The goal for this class project was to work in teams of 5 or 6 while implementing object oriented programming concepts, learn the process of github, and incorporate the agile process. The quarter was partitioned into sprints where we had to satisfy given requirements as well as a 'real world' client who gave us feedback. The first half of the quarter was focused on developing the UML editor in the commandline while the second half was focused on a GUI iteration. UML Editor was developed using the Java language and the Java FX GUI library.",
@@ -12,7 +12,7 @@
     },
     {
       "title": "Welcome To Cheney",
-      "type": "iOS/Android",
+      "platform": "iOS/Android",
       "image": "https://i.imgur.com/6oqYI4h.png",
       "alt_id": "wtc-app",
       "description": "Welcome to Cheney is an application, currently in the early stages of development, that is intended to connect the residents of Cheney Washington with local organizations and city officials. The application is not out yet, and it is just fresh out of the conceptualization phase. WTC is my (along with four others) senior project for the Eastern Washington University Computer Science program. It will be developed with the Flutter framework and Firebase for the backend.",
@@ -22,7 +22,7 @@
     },
     {
       "title": "Devil's Treasure",
-      "type": "PC/Browser Game",
+      "platform": "PC/Browser Game",
       "image": "https://i.imgur.com/JFcUIoc.png",
       "alt_id": "devils-treasure",
       "description": "Devil's Treasure is a - currently in development - action/adventure game inspired by Metroid and Legend of Zelda on the game boy color. The game features 2D graphics inspired by the 8-bit graphics of the gameboy color. The game features puzzle/platforming mechanics where you will take on lock/key puzzles, platforming puzzles, and fighting against a plethora of enemies and a boss at the end. This project was intended to contribute to the lore a long running ~ in development ~ game world as well as practice my game development skills. The project is currently being prototyped and developed in the Godot game engine.",
@@ -32,7 +32,7 @@
     },
     {
       "title": "Tetris",
-      "type": "PC Game",
+      "platform": "PC Game",
       "image": "https://m.media-amazon.com/images/I/61M3rDwh4qL.png",
       "alt_id": "tetris",
       "description": "Tetris was a quick project to practice my python object oriented skills. It was developed using the graphics library - PyGame. This project was developed during the end of summer of 2023.",
@@ -85,8 +85,8 @@
       "body": "Nolan started implementing a post list for the home page. \nIn theory, this should be able to take filtered posts from a given user's on the back end and display it to them via a list.\n\nA user should be able to interact with a given post - if applicable. For example: they can click a check box for attending an event.\n\n- Matt\n\n",
       "author": "DennysGuy",
       "avatar": "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg",
-      "id": "6949",
-      "date": "4/3/2024"
+      "date": "4/3/2024",
+      "id": "6949"
     }
   ],
   "tetris_blogs": []

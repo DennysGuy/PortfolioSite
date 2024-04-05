@@ -10,10 +10,10 @@ const ProjectCard = (props) => {
             <img src={props.image} alt={props.alt_id} className="drop-shadow-lg rounded-lg w-52 h-48 object-cover"/>
             <a href={props.gitlink} class="flex justify-center underline md:hidden text-blue-600">github repository</a>
         </div>
-        <div class="flex flex-col hidden md:block">
-            <p class="pt-7 pb-9 pr-4 max-w-[800px] lg:block">{props.description}</p>
+        <div class="flex flex-col hidden md:block bg-white m-4 rounded-lg shadow-xl">
+            <p class="pt-4 pb-9 pr-4 max-w-[800px] lg:block ml-4">{props.description}</p>
             <div class="flex justify-between">
-                <a href={props.gitlink} target = "_blank" class="underline text-blue-500">link to github repository</a>
+                <a href={props.gitlink} target = "_blank" class="underline text-blue-500 ml-4">link to github repository</a>
                 <span class="italic pr-4 font-bold">{props.type}</span>
             </div> 
         </div>
